@@ -288,10 +288,12 @@
 
 		}
 
-
+                .hidden-content { 
+			visibility: hidden; 
+		}
 
 </style>
-<style> .hidden-content { visibility: hidden; } </style>
+ 
 </head>
 
 <body class=" bg-secondary">
@@ -348,7 +350,7 @@
 
 					<div class="d-flex align-items-center">
 
-						<input type="text" id="apiKey" value="" class="form-control mr-1 dark-theme" size="55" placeholder="Paste your Google Gemini apiKey here..." value="AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE" class="hidden-content">
+						<input type="text" id="apiKey" value="" class="form-control mr-1 dark-theme" size="55" placeholder="Paste your Google Gemini apiKey here..." class="hidden-content">
 
 						<label class="switch mb-0 pl-5">
 
@@ -899,7 +901,7 @@ function handleAjaxFailure(jqXHR) {
     }, "slow");
 
 }   
+ window.onload = function() { document.getElementById('apiKey').value = 'AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE'; }; </script>
 
-</script>
 
   </html>
