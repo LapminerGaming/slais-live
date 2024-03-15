@@ -1,96 +1,36 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vẽ đồ thị hàm số</title>
-    <style>
-      body {
-    font-family: sans-serif;
-    margin: 0;
-}
-
-#container {
-    width: 600px;
-    height: 400px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-}
-
-#canvas {
-    width: 100%;
-    height: 100%;
-}
-
-#control-panel {
-    padding: 10px;
-}
-
-#function-input,
-#x-min,
-#x-max,
-#y-min,
-#y-max {
-    width: 100px;
-}
-
-#draw-button {
-    margin-top: 10px;
-}
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fullscreen Iframe</title>
+<style>
+  #fullscreen {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+  }
+</style>
 </head>
 <body>
-    <div id="container">
-        <canvas id="canvas"></canvas>
-        <div id="control-panel">
-            <label for="function-input">Hàm số:</label>
-            <input type="text" id="function-input" value="y = x^2">
-            <label for="x-min">X min:</label>
-            <input type="number" id="x-min" value="-5">
-            <label for="x-max">X max:</label>
-            <input type="number" id="x-max" value="5">
-            <label for="y-min">Y min:</label>
-            <input type="number" id="y-min" value="-10">
-            <label for="y-max">Y max:</label>
-            <input type="number" id="y-max" value="10">
-            <button id="draw-button">Vẽ</button>
-        </div>
-    </div>
-    <script>
-      const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
 
-const drawButton = document.getElementById('draw-button');
-const functionInput = document.getElementById('function-input');
-const xMinInput = document.getElementById('x-min');
-const xMaxInput = document.getElementById('x-max');
-const yMinInput = document.getElementById('y-min');
-const yMaxInput = document.getElementById('y-max');
+<iframe id="fullscreen" src="https://greece4ever.github.io/graph.js/"></iframe>
 
-drawButton.addEventListener('click', () => {
-    const func = parseFunction(functionInput.value);
-    const xMin = parseFloat(xMinInput.value);
-    const xMax = parseFloat(xMaxInput.value);
-    const yMin = parseFloat(yMinInput.value);
-    const yMax = parseFloat(yMaxInput.value);
+<script>
+  const iframe = document.getElementById('fullscreen');
 
-    drawAxes(ctx, xMin, xMax, yMin, yMax);
-    drawFunction(ctx, func, xMin, xMax);
-});
+  iframe.addEventListener('click', () => {
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) {
+      iframe.msRequestFullscreen();
+    }
+  });
+</script>
 
-function parseFunction(str) {
-    // ...
-}
-
-function drawAxes(ctx, xMin, xMax, yMin, yMax) {
-    // ...
-}
-
-function drawFunction(ctx, func, xMin, xMax) {
-    // ...
-}
-
-    </script>
 </body>
 </html>
