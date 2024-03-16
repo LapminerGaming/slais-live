@@ -1,19 +1,16 @@
-qaddEventListener('DOMContentLoaded', (event) => {
+addEventListener('DOMContentLoaded', (event) => {
     const header = `
 <nav class="menu">
         <div class="menuLogo"><h1>SLAIS</h1></div>
-        
+        <div class="menuLinks">
           
-        
-        </div>
         <div class="menuButtons">
           <div class="menuButton"></div>
         </div>
       </nav>
       <div class="sideBar">
         <div class="sideBarBox">
-          <a class="sideBarLink" href="/"
-            >Trang chủ</a
+                      >Trang chủ</a
           >
 
           <div class="sideBarLine"></div>
