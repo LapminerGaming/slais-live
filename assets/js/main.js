@@ -1,4 +1,4 @@
-addEventListener('DOMContentLoaded', (event) => {
+qaddEventListener('DOMContentLoaded', (event) => {
     const header = `
 <nav class="menu">
         <div class="menuLogo"><h1>SLAIS</h1></div>
@@ -30,26 +30,7 @@ addEventListener('DOMContentLoaded', (event) => {
             >Phần mềm - Ứng dụng
           </a>
 
-          <a class="sideBarLink" href="https://kitomcvn.github.io/KitoMC/miniGame"
-            ><img class="sideBarIcon" src="https://kitomcvn.github.io/KitoMC/assets/image/icons/saveIcon.png" />
-            Mini Game
-          </a>
-
-          <div class="sideBarLine"></div>
-
-          <a class="sideBarLink" href="https://youtube.com/@kitomc">
-            <img
-              class="sideBarIcon"
-              src="https://kitomcvn.github.io/KitoMC/assets/image/icons/youtubeIcon.png"
-            />YoutuBe
-          </a>
-
-          <a class="sideBarLink" href=""
-            ><img
-              class="sideBarIcon"
-              src="https://kitomcvn.github.io/KitoMC/assets/image/icons/discordIcon.png"
-            />Discord</a
-          >
+          
         </div>
       </div>
 
