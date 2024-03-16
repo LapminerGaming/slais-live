@@ -10,7 +10,7 @@ addEventListener('DOMContentLoaded', (event) => {
       </nav>
       <div class="sideBar">
         <div class="sideBarBox">
-                      >Trang chủ</a
+                      <a class="sideBarLink" href="/">Trang chủ</a
           >
 
           <div class="sideBarLine"></div>
