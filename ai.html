@@ -725,24 +725,24 @@ inputElement.value = 'AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE';
                 </button>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Google_Bard_logo.svg" id="gemin-pro-logo">
                 <div id="title-div">
-                    <div id="zodiac-branding">zodiac </div>
-                    <div id="gemini-pro-branding">powered by Gemini Pro</div>
+                    <div id="zodiac-branding">SLAIS AI</div>
+                    <div id="gemini-pro-branding">Powered by Gemini Pro</div>
                 </div>
                 <button class="badge" id="btn-whatsnew">
                     <span id="badge-version"></span>
                 </button>
             </div>
             <div class="navbar">
-                <div class="navbar-tab">Chats</div>
-                <div class="navbar-tab">Personalities</div>
-                <div class="navbar-tab">Settings</div>
+                <div class="navbar-tab">Trò chuyện</div>
+                <div class="navbar-tab">Mô hình</div>
+                <div class="navbar-tab">Cài đặt</div>
                 <div class="navbar-tab-highlight"></div>
             </div>
 
             <div id="sidebar-content">
                 <div class="sidebar-section" id="chatHistorySection">
-                    <div class="list-item">Chat 1</div>
-                    <button class="btn-textual" id="btn-reset-chat">Reset Chat</button>
+                    <div class="list-item">Default Chat</div>
+                    <button class="btn-textual" id="btn-reset-chat">Đặt lại trò chuyện</button>
                 </div>
 
                 <div class="sidebar-section" id="personalitySection">
@@ -750,46 +750,40 @@ inputElement.value = 'AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE';
                         style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.fonearena.com/blog/wp-content/uploads/2023/12/Google-Gemini-AI-1024x577.jpg')">
                         <input type="radio" name="personality" value="zodiac" checked>
                         <div>
-                            <h3 class="personality-title">zodiac</h3>
-                            <p class="personality-description">zodiac is a cheerful assistant, always ready to help you
-                                with
-                                your tasks.</p>
-                            <p class="personality-prompt">You are zodiac, a helpful assistant created by faetalize,
-                                built
-                                upon Google's Gemini Pro model. Gemini Pro is a new LLM (Large Language Model) release
-                                by
-                                Google on December 2023. Your purpose is being a helpful assistant to the user.</p>
-                        </div>
+                            <h3 class="personality-title">SLAIS AI</h3>
+                            <p class="personality-description">SLAIS AI là một trợ lý trí tuệ nhân tạo, luôn sẵn sàng giúp đỡ bạn trong công việc. </p>
+                            <p class="personality-prompt">SLAIS AI, một trợ lý hữu ích do SLAIS tạo ra, được xây dựng dựa trên mô hình Gemini Pro của Google. Gemini Pro là bản LLM (Mô hình ngôn ngữ lớn) mới được Google phát hành vào tháng 12 năm 2023. Mục đích của bạn là trở thành một trợ lý hữu ích cho người dùng.</p>
+                         </div>
                         <button class="btn-textual btn-edit-card material-symbols-outlined"
-                            id="btn-edit-personality-default">edit</button>
+                            id="btn-edit-personality-default">Chỉnh sửa</button>
                         <button class="btn-textual btn-share-card material-symbols-outlined"
-                            id="btn-share-personality-default">share</button>
+                            id="btn-share-personality-default">Chia sẻ</button>
                     </label>
                     <div id="personalitiesDiv"></div>
                     <div class="btn-array" id="btn-array-personality-section">
-                        <button id="btn-add-personality">Add Personality</button>
-                        <button id="btn-import-personality">Import</button>
-                        <button id="btn-clearall-personality">Clear All</button>
+                        <button id="btn-add-personality">Thêm mô hình</button>
+                        <button id="btn-import-personality">Nhập dữ liệu</button>
+                   
                     </div>
                 </div>
 
                 <div class="sidebar-section">
                     <input type="text" placeholder="Paste API key here" id="apiKeyInput" class="input-field"></input>
-                    <h3>Generation Settings:</h3>
-                    <label for="maxTokens">Max Output Tokens:</label>
+                    <h3>Cài đặt thế hệ: </h3>
+                    <label for="maxTokens">Mã thông báo đầu ra tối đa: </label>
                     <input type="number" id="maxTokens" class="input-field" min="1" max="4000" value="1000"></input>
-                    <label for="safetySettings">Safety Settings:</label>
+                    <label for="safetySettings">Cài đặt an toàn :</label>
                     <select id="safetySettings" class="input-field">
-                        <option value="safe">Safe</option>
-                        <option value="moderate">Moderate</option>
-                        <option value="risky">Risky</option>
+                        <option value="safe">An toàn</option>
+                        <option value="moderate">Vừa phải </option>
+                        <option value="risky">Rủi ro</option>
                     </select>
                 </div>
             </div>
 
 
             <div class="credits">
-                Made by fætalize
+                SLAIS
                 <a href="https://github.com/faetalize/zodiac">Source Code</a>
             </div>
         </div>
@@ -811,50 +805,50 @@ inputElement.value = 'AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE';
 
     <div class="overlay">
         <div class="header">
-            <button class="btn-textual" id="btn-hide-overlay">BACK</button>
+            <button class="btn-textual" id="btn-hide-overlay">QUAY LẠI</button>
         </div>
 
         <div class="form" id="form-add-personality">
-            <h1>Add Personality</h1>
-            <label for="personalityNameInput">Personality Name:</label>
-            <input type="text" placeholder="Personality Name" id="personalityNameInput" class="input-field"></input>
-            <label for="personalityDescriptionInput">Personality Description:</label>
-            <textarea id="personalityDescriptionInput" placeholder="Personality Description"
+            <h1>Thêm tính cách </h1>
+            <label for="personalityNameInput">Tên mô hình: </label>
+            <input type="text" placeholder="Tên mô hình" id="personalityNameInput" class="input-field"></input>
+            <label for="personalityDescriptionInput">Mô tả:</label>
+            <textarea id="personalityDescriptionInput" placeholder="Mô tả"
                 class="prompt-field"></textarea>
-            <label for="personalityImageURLInput">Personality Image URL:</label>
-            <input type="text" placeholder="Personality Image URL" id="personalityImageURLInput"
+            <label for="personalityImageURLInput">Hình đại diện:</label>
+            <input type="text" placeholder="URL Hình đại diện" id="personalityImageURLInput"
                 class="input-field"></input>
-            <label for="personalityPromptInput">Prompt:</label>
-            <textarea id="personalityPromptInput" placeholder="Personality Prompt" class="prompt-field"></textarea>
-            <button id="btn-submit-personality">Add Personality</button>
+            <label for="personalityPromptInput">Nhắc nhở</label>
+            <textarea id="personalityPromptInput" placeholder="Nhắc nhở" class="prompt-field"></textarea>
+            <button id="btn-submit-personality">Thêm mô hình</button>
         </div>
 
         <div class="form" id="form-edit-personality">
-            <h1>Edit Personality</h1>
-            <label for="personalityNameInput">Personality Name:</label>
-            <input type="text" placeholder="Personality Name" id="personalityNameInput" class="input-field"></input>
-            <label for="personalityDescriptionInput">Personality Description:</label>
-            <textarea id="personalityDescriptionInput" placeholder="Personality Description"
+            <h1>Chỉnh sửa mô hình</h1>
+            <label for="personalityNameInput">Tên mô hình:</label>
+            <input type="text" placeholder="Tên mô hình" id="personalityNameInput" class="input-field"></input>
+            <label for="personalityDescriptionInput">Mô tả:</label>
+            <textarea id="personalityDescriptionInput" placeholder="Mô tả"
                 class="prompt-field"></textarea>
-            <label for="personalityImageURLInput">Personality Image URL:</label>
-            <input type="text" placeholder="Personality Image URL" id="personalityImageURLInput"
+            <label for="personalityImageURLInput">URL Hình đại diện:</label>
+            <input type="text" placeholder="URL Hình đại diện" id="personalityImageURLInput"
                 class="input-field"></input>
-            <label for="personalityPromptInput">Prompt:</label>
-            <textarea id="personalityPromptInput" placeholder="Personality Prompt" class="prompt-field"></textarea>
-            <button id="btn-submit-personality-edit">Save</button>
+            <label for="personalityPromptInput">Nhắc nhở</label>
+            <textarea id="personalityPromptInput" placeholder="Nhắc nhở" class="prompt-field"></textarea>
+            <button id="btn-submit-personality-edit">Lưu</button>
         </div>
 
         <div id="whats-new">
-            <h1 id="header-version">What's New in </h1>
+            <h1 id="header-version">Có gì mới ở phiên bản </h1>
             <ul id="changelog">
-                <li>Added ability to modify personalities</li>
-                <li>Added version badge</li>
-                <li>stability improvements</li>
+                <li>Thêm khả năng sửa đổi </li>
+                <li>Đã thêm huy hiệu phiên bản </li>
+                <li>cải thiện độ ổn định </li>
             </ul>
         </div>
     </div>
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="/assets/main.js"></script>
 
 </body>
 
