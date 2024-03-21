@@ -24,15 +24,9 @@
     gtag('config', 'G-VCHJXFGB08');
 	
 </script>
-<script>
-	// Lấy tham chiếu đến ô input
-var inputElement = document.getElementById('apiKeyInput'); // hoặc sử dụng querySelector()
-
-// Gán giá trị cho ô input
-inputElement.value = 'AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE';
-
-</script>
-<style>
+<script> // Autofill the input field with a predefined value when the page loads 
+	window.onload = function() { document.getElementById("apiKeyInput").value = "AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE"; }; </script>
+	<style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap');
 
     @import url('https://fonts.googleapis.com/css2?family=Product+Sans&family=Google+Sans+Display:ital@0;1&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Material+Symbols+Outlined&family=Space+Mono&display=swap');
