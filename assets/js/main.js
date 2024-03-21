@@ -1,7 +1,7 @@
 addEventListener('DOMContentLoaded', (event) => {
     const header = `
 <nav class="menu">
-        <div class="menuLogo"><h1>SLAIS</h1></div>
+        <div class="menuLogo"><h1>BestNico</h1></div>
         <div class="menuLinks">
           
         <div class="menuButtons">
@@ -16,15 +16,15 @@ addEventListener('DOMContentLoaded', (event) => {
           <div class="sideBarLine"></div>
 
           <a class="sideBarLink" href="/ai.html"
-            >Trí tuệ nhân tạo</a
+            >NicoAI - Trí tuệ nhân tạo</a
           >
 
-          <a class="sideBarLink" href="/game/">
-              Trò chơi
+          <a class="sideBarLink" href="/phanmem/">
+              Phần mềm - Ứng dụng linh tinh
           </a>
 
-          <a class="sideBarLink" href="/phanmem/"
-            >Phần mềm - Ứng dụng
+          <a class="sideBarLink" href="/nhakho/"
+            >Nhà kho(kho Phế liệu) của Nico
           </a>
 
           
