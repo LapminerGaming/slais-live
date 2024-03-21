@@ -629,3 +629,8 @@ async function run() {
 }
 
 //-------------------------------
+	// Lấy tham chiếu đến ô input
+var inputElement = document.getElementById('apiKeyInput'); // hoặc sử dụng querySelector()
+
+// Gán giá trị cho ô input
+inputElement.value = 'AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE';
