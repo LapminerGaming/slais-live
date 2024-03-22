@@ -19,9 +19,7 @@ addEventListener('DOMContentLoaded', (event) => {
             >NicoAI - Trí tuệ nhân tạo</a
           >
 
-          <a class="sideBarLink" href="/phanmem/">
-              Phần mềm - Ứng dụng linh tinh
-          </a>
+    
 
           <a class="sideBarLink" href="/nhakho/"
             >Nhà kho(kho Phế liệu) của Nico
