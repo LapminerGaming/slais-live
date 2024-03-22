@@ -61,3 +61,22 @@ addEventListener('DOMContentLoaded', (event) => {
 
     footerContainer.innerHTML = footer;
 });
+  // Replace 'YOUR_CHANNEL_ID' with your actual YouTube channel ID
+  const channelId = 'YOUR_CHANNEL_ID';
+  const apiKey = 'AIzaSyBYJQWBBBoOFEFS0yd3FoFHoLTo7NavKu0';
+  const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+
+  // Function to fetch subscriber count
+  async function fetchSubscriberCount() {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const subscriberCount = data.items[0].statistics.subscriberCount;
+      document.getElementById('subscriberCount').innerText = `Subscriber Count: ${subscriberCount}`;
+    } catch (error) {
+      console.error('Error fetching subscriber count:', error);
+      document.getElementById('subscriberCount').innerText = 'Error fetching subscriber count';
+    }
+  }
+
+  fetchSubscriberCount();
