@@ -48,8 +48,7 @@
 		       </section>
     </div>
 	    <div style="text-align:center;">
-		     <p style="background-color:yellow">Bạn đang truy cập trang web <span id="status">ĐANG NHẬN DIỆN...</span></p>
-		     </h3> </br>
+		     <h3 style="background-color:yellow">Trang web hiện chưa hoàn thiện, có thể có lỗi ở bất kì đâu trong trang web!</h3>
 		        <a href="https://youtube.com/@lapminergaming"><button class="button-21" role="button">Youtube</button></a>
                              <a href="https://tiktok.com/@bestnico_"><button class="button-21" role="button">Tiktok</button></a>
 		          </br>
@@ -101,19 +100,7 @@
          class="footer"> 
 </footer>
         </div>
-<script>
-	const status = document.getElementById('status')
 
-        status.textContent = navigator.onLine ? 'Online' : 'Offline'
-
-        window.addEventListener('offline', e => {
-            status.textContent = 'Offline'
-        })
-
-        window.addEventListener('online', e => {
-            status.textContent = 'Online'
-        })
-</script>
         
     </body>
 </html>
