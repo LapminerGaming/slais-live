@@ -24,6 +24,25 @@
     gtag('config', 'G-VCHJXFGB08');
 	
 </script>
+	<script>
+        document.addEventListener('contextmenu', event => event.preventDefault())
+
+        document.onkeydown = function (e) {
+            if (e.ctrlKey &&
+                (e.keyCode === 85)) {
+                return false
+            }
+
+            if ((e.ctrlKey && e.shiftKey) &&
+                (e.keyCode === 73)) {
+                return false
+            }
+
+            if (event.keyCode === 123) {
+                return false
+            }
+        }
+	</script>
 <script> // Autofill the input field with a predefined value when the page loads 
 	window.onload = function() { document.getElementById("apiKeyInput").value = "AIzaSyCgSk39AT9HbKEj4CMq5puyk5in9menURE"; }; </script>
 	<style>
