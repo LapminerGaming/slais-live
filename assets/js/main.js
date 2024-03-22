@@ -62,7 +62,7 @@ addEventListener('DOMContentLoaded', (event) => {
     footerContainer.innerHTML = footer;
 });
   // Replace 'YOUR_CHANNEL_ID' with your actual YouTube channel ID
-  const channelId = 'YOUR_CHANNEL_ID';
+  const channelId = 'UCqZ4kYJ3QFdihfa3rZZa9Sg';
   const apiKey = 'AIzaSyBYJQWBBBoOFEFS0yd3FoFHoLTo7NavKu0';
   const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
 
