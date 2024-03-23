@@ -26,7 +26,9 @@ addEventListener('DOMContentLoaded', (event) => {
           <a class="sideBarLink" href="/phanmem/"
             >Phần mềm - Ứng dụng học tập
           </a>
-
+<a class="sideBarLink" href="/news.html"
+            >Tin tức
+          </a>
           
         </div>
       </div>
