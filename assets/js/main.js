@@ -1,7 +1,7 @@
 addEventListener('DOMContentLoaded', (event) => {
     const header = `
 <nav class="menu">
-        <div class="menuLogo"><h1>BestNico</h1></div>
+        <div class="menuLogo"><h1>SLAIS</h1></div>
         <div class="menuLinks">
           
         <div class="menuButtons">
