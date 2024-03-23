@@ -17,22 +17,22 @@
         <meta name="theme-color" content="#2b2b2b" />
 
         <!-- Thẻ Meta Chính -->
-        <title>About me • BestNico</title>
-        <meta name="title" content="About me • BestNico" />
+        <title>Phần mềm - Ứng dụng • SLAIS</title>
+        <meta name="title" content="Phần mềm - Ứng dụng • SLAIS" />
         <meta name="description" content="" />
 
         <!-- Open Graph - Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="" />
         <meta property="og:url" content="" />
-        <meta proper"og:title" content="About me • BestNico" />
+        <meta proper"og:title" content="Phần mềm - Ứng dụng • SLAIS" />
         <meta roperty="og:description" content="" />
         <meta property="og:image" content=""width=853&height=480" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="" />
-        <meta property="twitter:title" content="About me • BestNico" />
+        <meta property="twitter:title" content="Phần mềm - Ứng dụng • SLAIS" />
         <meta property="twitter:description" content="" />
         <meta property="twitter:image" content=""width=853&height=480 />
 
@@ -45,6 +45,40 @@
 </body> </html>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4359305307032894"
      crossorigin="anonymous"></script>
+<script>
+	const searchInput = document.getElementById('searchInput');
+const searchList = document.getElementById('searchList');
+
+const items = [
+  { name: 'Toán - Phần mềm vẽ đồ thị hàm số', link: '/phanmem/dothihamso.html' },
+  { name: 'Hóa học - Phần mềm thí nghiệm ảo', link: '/phanmem/virtual-chemistry.html' },
+  // Add more items as needed
+];
+
+function displayItems(items) {
+  searchList.innerHTML = '';
+  items.forEach(item => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = item.link;
+    a.textContent = item.name;
+    li.appendChild(a);
+    searchList.appendChild(li);
+  });
+}
+
+function filterItems(query) {
+  const filteredItems = items.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
+  displayItems(filteredItems);
+}
+
+searchInput.addEventListener('input', () => {
+  filterItems(searchInput.value);
+});
+
+// Display all items initially
+displayItems(items);
+</script>
 <style>
 * {
   box-sizing: border-box;
@@ -90,8 +124,28 @@
                 <div class="container">
 
                     
-               
-        
+               <input type="text" id="searchInput" placeholder="Search..."> 
+			<ul id="searchList"></ul>
+        <style>
+		#searchList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#searchList li {
+  margin-bottom: 5px;
+}
+
+#searchList li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#searchList li a:hover {
+  color: #007bff;
+}
+</style>
+			
 
  
 
