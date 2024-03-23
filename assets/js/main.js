@@ -16,13 +16,15 @@ addEventListener('DOMContentLoaded', (event) => {
           <div class="sideBarLine"></div>
 
           <a class="sideBarLink" href="/ai.html"
-            >NicoAI - Trí tuệ nhân tạo</a
+            >SLAIS AI - Trí tuệ nhân tạo</a
           >
 
-    
+    <a class="sideBarLink" href="/game/"
+            >Trò chơi
+          </a>
 
-          <a class="sideBarLink" href="/nhakho/"
-            >Nhà kho(kho Phế liệu) của Nico
+          <a class="sideBarLink" href="/phanmem/"
+            >Phần mềm - Ứng dụng học tập
           </a>
 
           
