@@ -45,40 +45,7 @@
 </body> </html>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4359305307032894"
      crossorigin="anonymous"></script>
-<script>
-	const searchInput = document.getElementById('searchInput');
-const searchList = document.getElementById('searchList');
 
-const items = [
-  { name: 'Toán - Phần mềm vẽ đồ thị hàm số', link: '/phanmem/dothihamso.html' },
-  { name: 'Hóa học - Phần mềm thí nghiệm ảo', link: '/phanmem/virtual-chemistry.html' },
-  // Add more items as needed
-];
-
-function displayItems(items) {
-  searchList.innerHTML = '';
-  items.forEach(item => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = item.link;
-    a.textContent = item.name;
-    li.appendChild(a);
-    searchList.appendChild(li);
-  });
-}
-
-function filterItems(query) {
-  const filteredItems = items.filter(item => item.name.toLowerCase().includes(query.toLowerCase()));
-  displayItems(filteredItems);
-}
-
-searchInput.addEventListener('input', () => {
-  filterItems(searchInput.value);
-});
-
-// Display all items initially
-displayItems(items);
-</script>
 <style>
 * {
   box-sizing: border-box;
@@ -125,25 +92,7 @@ displayItems(items);
 
                     
                
-        <style>
-		#searchList {
-  list-style-type: none;
-  padding: 0;
-}
-
-#searchList li {
-  margin-bottom: 5px;
-}
-
-#searchList li a {
-  text-decoration: none;
-  color: #333;
-}
-
-#searchList li a:hover {
-  color: #007bff;
-}
-</style>
+        
 			
 
  
@@ -166,8 +115,10 @@ displayItems(items);
 	   </br>
 		<div style="color:white;text-align:center;">
 			<input type="text" id="searchInput" placeholder="Search..."> 
-			<ul id="searchList"></ul>
-<style>
+			<ul id="itemList"> 
+				<a href="dothihamso.html"><li>Toán - Phần mềm vẽ đồ thị hàm số</li></a>
+				<a href="virtual-chemistry.html"><li>Hóa học - Phần mềm thí nghiệm hóa học ảo</li> </a>
+			</ul>
 .button-9 {
   appearance: button;
   backface-visibility: hidden;
