@@ -57,87 +57,9 @@
  <span id="lowBatteryWarning">PIN YẾU! HÃY SẠC PIN ĐẦY RỒI HỌC NHA!</span> 
 <style> #lowBatteryWarning { display: none; background-color:orange; } </style>
 		      
-       <div id="location">
-        Your Location is <span id="city">Loading...</span>, <span id="state"></span>
-      </div><!--End of Location-->
-
-   <div id="weather">
-          <div class="row">
-             <span id="wIcon"></span>
-         </div>
-
-          <div class="row">
-           It's <span id="temp"></span> over there!
-         </div>
-
-          <div class="row">
-         <button class="btn btn-primary" id="btnToggle">Convert C/F Temp</button>
-          </div>
-  </div><!--End of Weather-->
-
-<style>
-	#city, #state {
-  color: aqua;
-}
-
-#weather {
- margin-top: 10px;
-}
-
-#temp {
-  color: yellow;
-}
-
-#btn {
-  margin-top: 10px;
-}
-
-img {
-  width: 70px;
-}
-
-
-#cred {
-  color: yellow !important;
-  position: absolute;
-  bottom: 0;
-  left: 100px;
-  font-size: 20px;
-  padding-bottom: 20px;
-}
-
-a {
-  color: aqua!important;
-}
-</style>
-		    <script>
-			    $(document).ready(function(){
-
-var proxy = 'https://cors-anywhere.herokuapp.com/';
-
-  var Ip = 'https://ipinfo.io/json';
-
-     $.getJSON(Ip, function(data) {
-      var city = data.city;
+       
       var region = data.region;
-      var country = data.country;
-
-      var KEY = '&APPID=767a7cce68ed2b3098d41e24364ec56c';
-
-      var URL ='http://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + region + country + KEY;
-
-      $.getJSON(proxy + URL, function(data) {
-        var type = data.weather[0].main;  //array 0 index
-        var id = data.weather[0].id; //array 0 index
-        var city = data.name;
-
-        var tempCel = Math.round(data.main.temp - 273.15);
-        var tempC = tempCel + '°C';
-        var weather = data.weather[0].description;
-        var tempF = Math.round(tempCel * (9 / 5) + 32) + '°F';
-        var icon = data.weather[0].icon;
-        var tempBool = true;
-	      </script>
+      
     </body>
 		    </br>
 			<a class="chatai" href="/ai.html"><img src="image/IMG_20240313_111112.jpg" width="350" height="350" /></a>
