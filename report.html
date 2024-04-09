@@ -42,42 +42,52 @@
         <link rel="stylesheet" href="/assets/css/base.css" />
 <link rel="stylesheet" href="/assets/css/star.css" />
         <script src="/assets/js/main.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-database.js"></script>
-<script>
-  // Thiết lập cấu hình Firebase của bạn
-  var firebaseConfig = {
-    apiKey: "AIzaSyDfWh719VKGf9MWtnk59B9SYJXdm3pHTQY",
-    authDomain: "slais-database.firebaseapp.com",
-    projectId: "slais-database",
-    storageBucket: "slais-database.appspot.com",
-    databaseURL: "https://slais-database-default-rtdb.firebaseio.com/",
-    messagingSenderId: "772984610918",
-    appId: "1:772984610918:web:8da9c8292915f8e1344da7"
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script>
+    // Cấu hình Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyDfWh719VKGf9MWtnk59B9SYJXdm3pHTQY",
+      authDomain: "slais-database.firebaseapp.com",
+      databaseURL: "https://slais-database-default-rtdb.firebaseio.com/",
+      projectId: "slais-database",
+      storageBucket: "slais-database.appspot.com",
+      messagingSenderId: "772984610918",
+      appId: "1:772984610918:web:8da9c8292915f8e1344da7",
   };
-  // Khởi tạo Firebase
-  firebase.initializeApp(firebaseConfig);
+	  
+    };
+    firebase.initializeApp(firebaseConfig);
 
-  // Lấy reference đến Firebase database
-  var database = firebase.database();
+    // Khởi tạo Firestore
+    var db = firebase.firestore();
 
-  // Function gửi dữ liệu lên Firebase
-  function submitForm() {
-    var hoTen = document.getElementById("hoTen").value;
-    var email = document.getElementById("email").value;
-    var noiDung = document.getElementById("noiDung").value;
+    // Lấy dữ liệu từ biểu mẫu
+    function getData() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var content = document.getElementById("content").value;
 
-    // Push dữ liệu lên Firebase database
-    database.ref('feedbacks').push({
-      hoTen: hoTen,
-      email: email,
-      noiDung: noiDung
-    });
+      return {
+        name: name,
+        email: email,
+        content: content,
+      };
+    }
 
-    // Reset form sau khi gửi
-    document.getElementById("form").reset();
-  }
-    </script>
+    // Gửi dữ liệu đến Firebase
+    function submitData() {
+      var data = getData();
+
+      // Thêm dữ liệu vào Firestore
+      db.collection("messages").add(data).then(function() {
+        alert("Gửi thành công!");
+      }).catch(function(error) {
+        alert("Gửi thất bại: " + error.message);
+      });
+    }
+  </script>
+
 </body> </html>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4359305307032894"
      crossorigin="anonymous"></script>
@@ -153,15 +163,19 @@
 		
 
 </head>
-  <h2>Gửi phản hồi</h2>
-  <form id="form">
-    <label for="hoTen">Họ và tên:</label><br>
-    <input type="text" id="hoTen" name="hoTen"><br>
-    <label for="email">Địa chỉ email:</label><br>
-    <input type="email" id="email" name="email"><br>
-    <label for="noiDung">Nội dung:</label><br>
-    <textarea id="noiDung" name="noiDung" rows="4" cols="50"></textarea><br>
-    <button type="button" onclick="submitForm()">Gửi</button>
+    <h1>Liên hệ với chúng tôi</h1>
+  <form onsubmit="submitData(); return false;">
+    <label for="name">Tên:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label for="content">Nội dung:</label>
+    <br>
+    <textarea id="content" rows="5" required></textarea>
+    <br>
+    <button type="submit">Gửi</button>
   </form>
 
 <script>
