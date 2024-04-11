@@ -56,10 +56,66 @@
 		    <h3 style="background-color:white;"><span class="font-bold" id="no-warp">Bạn đang sử dụng 1.1.1.1 , điều này có thể gây ảnh hưởng đến trải nghiệm của bạn</span></h3>
  <span id="lowBatteryWarning">PIN YẾU! HÃY SẠC PIN ĐẦY RỒI HỌC NHA!</span> 
 <style> #lowBatteryWarning { display: none; background-color:orange; } </style>
-		      
-       <h1 class="my-5" id="userName"></h1>
-      <a class="btn btn-main w-100" id="logOutBtn">Đăng xuất</a>
-      
+		      <div style="color:white">
+			      <h1 class="my-5" id="userName"></h1>
+      <a class="btn btn-main w-100" id="logOutBtn">
+	      
+      <!-- HTML !-->
+<button class="button-64" role="button"><span class="text">Đăng xuất khỏi tài khoản
+</span></button>
+      </a>
+<style>
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+      </style>
+       
     </body>
 		    </br>
 			<a class="chatai" href="/ai.html"><img src="image/IMG_20240313_111112.jpg" width="350" height="350" /></a>
